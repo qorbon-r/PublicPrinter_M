@@ -10,6 +10,7 @@ namespace PublicPrinter_M
         static void Main(string[] args)
         {
             var printer = new Copy();
+
             printer.WelcomeUser();
             printer.InformationForUser();
             printer.ValidCurrency();

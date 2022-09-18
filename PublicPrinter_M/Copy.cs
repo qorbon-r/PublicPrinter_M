@@ -40,8 +40,10 @@ namespace PublicPrinter_M
         }
         public void AmountOfDuplicates()
         {
-            const double pricePerDuplicate = 0.2;
+            // Variable für User-Input
+            int userInput = 0;
 
+            const double pricePerDuplicate = 0.2;
             const int oneEuro = 1;
             const int twoEuro = 2;
             const double fiftyCent = 0.5;
@@ -53,13 +55,30 @@ namespace PublicPrinter_M
             double remainingMoney = 0;
             double moneyOfUser = 0;
 
-            Write("Anzahl von Kopien eingeben: ");
-            int userInput = int.Parse(ReadLine());
+            try
+            {
+                Write("Anzahl von Kopien eingeben: ");
+                userInput = int.Parse(ReadLine());
+
+                if (userInput > 5)
+                    WriteLine("Bitte die maximale Anzahl von Kopien beachten.");
+                else if (userInput < 1)
+                    WriteLine("Die Zahl muss größer als 1 sein.");
+            }
+            catch (FormatException)
+            {
+                WriteLine("Bitte das richtige Format (eine Zahl eingeben) beachten. ");
+            }
+            catch (OverflowException)
+            {
+                WriteLine("Die eingegebene Zahl ist zu groß für den Datentyp Int32.");
+            }
 
             if (userInput == 1)
             {
                 Write("Bitte 0,20 Cent einwerfen: ");
                 moneyOfUser = double.Parse(ReadLine());
+
                 if (moneyOfUser < 0.2)
                 {
                     ForegroundColor = ConsoleColor.DarkRed;
@@ -227,13 +246,8 @@ namespace PublicPrinter_M
                 }
                 else if (moneyOfUser != twoEuro || moneyOfUser != oneEuro || moneyOfUser != fiftyCent)
                     WriteLine("Ungültig! Bitte die Tabelle der Münzen beachten.");
-
             }
 
         }
-
-
-
-
     }
 }
