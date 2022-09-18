@@ -54,7 +54,8 @@ namespace PublicPrinter_M
 
             double remainingMoney = 0;
             double moneyOfUser = 0;
-
+            
+            // Implementierung von Ausnahmebehandlung
             try
             {
                 Write("Anzahl von Kopien eingeben: ");
