@@ -1,0 +1,14 @@
+﻿Public printer
+---
+
+Geld einwerfen
+Wie viele Kopien?	
+Restgeld berechnen und zurückgeben
+Anzahl von Kopien fragen und anzeigen
+Welche Münzen oder Geldscheine kann der oder die jenige einwerfen - anzeigen
+Eine Danke Message  anzeigen
+
+Verbesserungsvorschläge
+--
+Den Datentyp decimal für verwenden
+
