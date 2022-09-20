@@ -11,7 +11,8 @@ namespace PublicPrinter_M
         {
             // Create a printer object
             var printer = new Copy();
-
+            
+            // My instance methods    
             printer.WelcomeUser();
             printer.InformationForUser();
             printer.ValidCurrency();
