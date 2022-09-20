@@ -43,6 +43,7 @@ namespace PublicPrinter_M
             // Variable für User-Input
             int userInput = 0;
 
+            // Konstanten
             const double pricePerDuplicate = 0.2;
             const int oneEuro = 1;
             const int twoEuro = 2;
