@@ -9,6 +9,7 @@ namespace PublicPrinter_M
     {
         static void Main(string[] args)
         {
+            // Create a printer object
             var printer = new Copy();
 
             printer.WelcomeUser();
