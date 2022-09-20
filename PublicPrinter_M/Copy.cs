@@ -55,7 +55,7 @@ namespace PublicPrinter_M
             double remainingMoney = 0;
             double moneyOfUser = 0;
             
-            // Implementierung von Ausnahmebehandlung
+            // Behandlung von Ausnahmen
             try
             {
                 Write("Anzahl von Kopien eingeben: ");
@@ -73,6 +73,10 @@ namespace PublicPrinter_M
             catch (OverflowException)
             {
                 WriteLine("Die eingegebene Zahl ist zu groß für den Datentyp Int32.");
+            }
+            catch (Exception ex)
+            {
+                WriteLine(ex.Message);
             }
 
             if (userInput == 1)
